@@ -62,6 +62,7 @@ function pullDates() {
 
     }
 
+   //this part is for highlighting email dates that are less than a month away
   var spreadsheet = SpreadsheetApp.getActive();
   spreadsheet.getRange('E:E').activate();
   var conditionalFormatRules = spreadsheet.getActiveSheet().getConditionalFormatRules();
