@@ -41,16 +41,15 @@ function pullDates() {
     var addresses = [];
 
     var thread = threads[0];
-    var data = thread.getLastMessageDate(); //this may be redundant, check
-    var msgs = threads[0].getMessages(); // formerely var msgs = threads[0].getMessages();
+    var msgs = threads[0].getMessages(); 
     var msg = msgs[0]
 
     // Values to get and store ✏️
     var data = msg.getDate();          
     var to = msg.getTo();
-    var last_date_contacted = [data]; // formerely said: var dataLine = [data,from,to];
+    var last_date_contacted = [data]; 
 
-    // Add values to array --> may be redundant also, check
+    // Add values to array --> may be redundant
     if (!AVOID_REPEATED_ADDRESS || (AVOID_REPEATED_ADDRESS && !addresses.includes(to))){
       contact_date.push(last_date_contacted);
       addresses.push(to);
@@ -62,11 +61,6 @@ function pullDates() {
     destination_col.setValues(contact_date);
 
     }
-    
-    //fix this: not doing anything at the moment
-    totalEmails = totalEmails + SEARCH_QUERY.length;
-    console.info(totalEmails + " dates added to sheet 🎉");
-  
 
   var spreadsheet = SpreadsheetApp.getActive();
   spreadsheet.getRange('E:E').activate();
