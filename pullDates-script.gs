@@ -103,4 +103,4 @@ function pullDates() {
 };
 
 
-// Original: https://github.com/TiagoGouvea/gmail-to-google-sheets-script/
+// inspired by: https://github.com/TiagoGouvea/gmail-to-google-sheets-script/
